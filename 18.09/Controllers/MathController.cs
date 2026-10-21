@@ -17,7 +17,7 @@ public class MathController : ControllerBase
     public ActionResult<double> CircleArea([FromQuery] double r)
     {
         if (r <= 0)
-            return BadRequest("r must be greater than zero");
+            return BadRequest();
 
         return _math.CircleArea(r);
     }
@@ -26,7 +26,7 @@ public class MathController : ControllerBase
     public ActionResult<double> SphereVolume([FromQuery] double r)
     {
         if (r <= 0)
-            return BadRequest("r must be greater than zero");
+            return BadRequest();
 
         return _math.SphereVolume(r);
     }
@@ -36,11 +36,8 @@ public class MathController : ControllerBase
         [FromQuery] int count = 10,
         [FromQuery] int from = 1)
     {
-        if (count is < 1 or > MaxCount)
-            return BadRequest($"count must be between 1 and {MaxCount}");
-
-        if (from < 0)
-            return BadRequest("from must not be negative");
+        if (count is < 1 or > MaxCount || from < 0)
+            return BadRequest();
 
         return Ok(_math.Palindromes(count, from));
     }
