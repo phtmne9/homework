@@ -3,4 +3,7 @@ obj/
 *.user
 *.db
 _mystat/
+_mystat_ai/
 tools/
+.venv/
+__pycache__/
