@@ -1,0 +1,30 @@
+@host = http://localhost:5000
+@token = вставить_токен_из_ответа_ниже
+
+POST {{host}}/api/auth/token
+Content-Type: application/json
+
+{ "login": "admin", "password": "Admin#2024" }
+
+###
+
+GET {{host}}/api/demo/open
+
+###
+
+GET {{host}}/api/demo/secure
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/api/demo/admin
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/api/demo/it
+Authorization: Bearer {{token}}
+
+###
+
+GET {{host}}/api/demo/secure
