@@ -1,0 +1,86 @@
+{
+  "features": [
+    "sleep_hours",
+    "water_ml",
+    "steps",
+    "calories",
+    "protein_g",
+    "caffeine_mg",
+    "screen_hours",
+    "stress_level"
+  ],
+  "classes": [
+    "high",
+    "low",
+    "medium"
+  ],
+  "regressor": {
+    "name": "RandomForest",
+    "mae": 0.4848,
+    "rmse": 0.6105,
+    "r2": 0.8228
+  },
+  "classifier": {
+    "name": "RandomForest",
+    "accuracy": 0.6778,
+    "f1_macro": 0.6819
+  },
+  "all_regressors": {
+    "LinearRegression": {
+      "mae": 0.7739,
+      "rmse": 1.0532,
+      "r2": 0.4728
+    },
+    "RandomForest": {
+      "mae": 0.4848,
+      "rmse": 0.6105,
+      "r2": 0.8228
+    }
+  },
+  "all_classifiers": {
+    "LogisticRegression": {
+      "accuracy": 0.6444,
+      "f1_macro": 0.6403
+    },
+    "RandomForest": {
+      "accuracy": 0.6778,
+      "f1_macro": 0.6819
+    }
+  },
+  "feature_importance": [
+    {
+      "feature": "sleep_hours",
+      "importance": 0.698
+    },
+    {
+      "feature": "water_ml",
+      "importance": 0.0954
+    },
+    {
+      "feature": "stress_level",
+      "importance": 0.0934
+    },
+    {
+      "feature": "steps",
+      "importance": 0.0661
+    },
+    {
+      "feature": "protein_g",
+      "importance": 0.0136
+    },
+    {
+      "feature": "calories",
+      "importance": 0.0118
+    },
+    {
+      "feature": "screen_hours",
+      "importance": 0.0111
+    },
+    {
+      "feature": "caffeine_mg",
+      "importance": 0.0106
+    }
+  ],
+  "train_size": 720,
+  "test_size": 180
+}
