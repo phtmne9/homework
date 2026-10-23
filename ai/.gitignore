@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.db
+09-cv/yolov8n.pt
+13-sentiment/frontend/node_modules/
+13-sentiment/frontend/dist/
+13-sentiment/backend/analyses.db
