@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Health Tracker",
+    "slug": "health-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#0f1420"
+    },
+    "android": {
+      "package": "com.student.healthtracker"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-font"
+    ]
+  }
+}
