@@ -7,4 +7,5 @@ _mystat_ai/
 tools/
 .venv/
 __pycache__/
-*.pt
+ai/09-cv/yolov8n.pt
+ai/13-sentiment/backend/analyses.db
