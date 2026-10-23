@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House Price AI</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="head">
+      <h1>House Price AI</h1>
+      <p>Предсказание стоимости дома нейронной сетью PyTorch</p>
+    </header>
+
+    <section class="panel">
+      <h2>Состояние сервиса</h2>
+      <div class="actions">
+        <button type="button" id="checkApiBtn" class="ghost">Check API</button>
+        <button type="button" id="showFeaturesBtn" class="ghost">Show Features</button>
+        <button type="button" id="modelMetricsBtn" class="ghost">Model Metrics</button>
+      </div>
+      <div class="panel-output" id="panelOutput"></div>
+    </section>
+
+    <section class="card">
+      <h2>Параметры дома</h2>
+      <div class="grid">
+        <label><span>Overall quality <small>1–10</small></span>
+          <input id="overall_qual" type="number" min="1" max="10" value="7"></label>
+        <label><span>Overall condition <small>1–10</small></span>
+          <input id="overall_cond" type="number" min="1" max="10" value="5"></label>
+        <label><span>Living area <small>кв. футы</small></span>
+          <input id="gr_liv_area" type="number" min="1" value="1710"></label>
+        <label><span>Garage cars</span>
+          <input id="garage_cars" type="number" min="0" value="2"></label>
+        <label><span>Basement area <small>кв. футы</small></span>
+          <input id="total_bsmt_sf" type="number" min="0" value="856"></label>
+        <label><span>First floor <small>кв. футы</small></span>
+          <input id="first_flr_sf" type="number" min="1" value="856"></label>
+        <label><span>Year built</span>
+          <input id="year_built" type="number" min="1800" max="2100" value="2003"></label>
+        <label><span>Full bathrooms</span>
+          <input id="full_bath" type="number" min="0" value="2"></label>
+        <label><span>Bedrooms</span>
+          <input id="bedroom_abvgr" type="number" min="0" value="3"></label>
+        <label><span>Total rooms</span>
+          <input id="totrms_abvgrd" type="number" min="1" value="8"></label>
+      </div>
+
+      <button type="button" id="predictBtn">Predict Price</button>
+    </section>
+
+    <div class="loading" id="loading" hidden>
+      <span class="spinner"></span>
+      <span>Loading...</span>
+    </div>
+
+    <section class="error" id="error" hidden></section>
+
+    <section class="result" id="result" hidden></section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
