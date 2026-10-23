@@ -1,0 +1,5 @@
+fastapi==0.161.1
+pydantic==2.12.4
+torch==2.14.1
+transformers==5.1.1
+uvicorn==0.40.0
