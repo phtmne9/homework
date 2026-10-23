@@ -3,6 +3,8 @@ obj/
 *.user
 *.db
 _mystat/
+_mystat_all/
+_mystat_rn/
 _mystat_ai/
 tools/
 .venv/
