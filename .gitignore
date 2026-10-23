@@ -7,3 +7,4 @@ _mystat_ai/
 tools/
 .venv/
 __pycache__/
+*.pt
